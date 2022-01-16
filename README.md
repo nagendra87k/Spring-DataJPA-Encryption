@@ -1,6 +1,6 @@
 # Spring-DataJPA-Encryption
 
-This project has JPA properties based encryption and decryption using JPA "AttributeConverter" interface.
+This project has implimention of encryption and decryption for entity properties using JPA "AttributeConverter" interface.
 
 ![Alt text](https://github.com/nagendra87k/Spring-DataJPA-Encryption/blob/master/AddUser.png "Add User")
 ![Alt text](https://github.com/nagendra87k/Spring-DataJPA-Encryption/blob/master/GetUserByID.png "Get User By Id")
