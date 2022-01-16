@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "21550f73-f97d-45d4-9503-f6342f979d21",
+		"name": "Spring Data JPA Encryption",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
