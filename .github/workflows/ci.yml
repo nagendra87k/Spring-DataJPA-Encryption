@@ -28,6 +28,6 @@ jobs:
         image: nagendra87k/spring-data-jpa-encryption
         tags: latest
         registry: docker.io
-        dockerfile: Dockerfile
+        dockerfile: ./Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
