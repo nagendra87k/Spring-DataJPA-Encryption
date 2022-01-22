@@ -26,7 +26,6 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: nagendra87k/spring-data-jpa-encryption
-        tags: latest
         registry: https://hub.docker.com/repository/docker
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
