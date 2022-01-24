@@ -8,15 +8,15 @@ import javax.persistence.AttributeConverter;
 import java.security.Key;
 import java.util.Base64;
 
-public class PropertiesAttributeConverter implements AttributeConverter<String, String> {
+public class OLDPropertiesAttributeConverter implements AttributeConverter<String, String> {
 
     private static final String AES = "AES";
-    private static final byte[] encryptionKey = "this-is-test-key".getBytes();
+    private static final byte[] encryptionKey = "keep-it-secret".getBytes();
 
     private final Cipher encryptCipher;
     private final Cipher decryptCipher;
 
-    public PropertiesAttributeConverter() throws Exception {
+    public OLDPropertiesAttributeConverter() throws Exception {
         Key key = new SecretKeySpec(encryptionKey, AES);
         encryptCipher = Cipher.getInstance(AES);
         encryptCipher.init(Cipher.ENCRYPT_MODE, key);
