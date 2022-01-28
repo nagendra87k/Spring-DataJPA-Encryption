@@ -1,5 +1,7 @@
 package com.nagendra.springdatajpaencryption.entity;
 
+import com.nagendra.encryptiondecryption.service.AttributeConverterImpl;
+
 import javax.persistence.*;
 
 
@@ -15,7 +17,7 @@ public class User {
 
     private String email;
 
-    //@Convert(converter = OLDPropertiesAttributeConverter.class)
+    @Convert(converter = AttributeConverterImpl.class)
     private String mobile;
 
     public User(int id, String firstName, String emailId, String mobileNumber) {
