@@ -43,7 +43,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<!--<finalName>app</finalName>-->
+		<finalName>spring-boot-encryption-decryption</finalName>
+	</build>
 	</build>
 
 </project>
