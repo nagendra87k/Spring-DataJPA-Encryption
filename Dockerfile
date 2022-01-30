@@ -1,15 +1,17 @@
-FROM docker:stable
+# For Java 8, try this
+ FROM openjdk:8-jdk-alpine
 
-LABEL 'name'='Docker Deployment Action'
-LABEL 'maintainer'='Al-waleed Shihadeh <wshihadeh.dev@gmail.com>'
+# For Java 11, try this
+#FROM adoptopenjdk/openjdk11:alpine-jre
 
-LABEL 'com.github.actions.name'='Docker Deployment'
-LABEL 'com.github.actions.description'='supports docker-compose and Docker Swarm deployments'
-LABEL 'com.github.actions.icon'='send'
-LABEL 'com.github.actions.color'='green'
+# Refer to Maven build -> finalName
+ARG JAR_FILE=target/spring-data-jpa-encryption-0.0.1-SNAPSHOT.jar
 
-RUN apk --no-cache add openssh-client docker-compose
+# cd /opt/app
+WORKDIR /opt/app
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+# cp target/spring-boot-web.jar /opt/app/app.jar
+COPY ${JAR_FILE} app.jar
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+# java -jar /opt/app/app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
