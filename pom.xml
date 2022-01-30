@@ -45,6 +45,5 @@
 		</plugins>
 		<finalName>spring-boot-encryption-decryption</finalName>
 	</build>
-	</build>
 
 </project>
